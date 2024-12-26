@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA 500 - Problem Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <h1>DSA 500</h1>
+            <div class="progress-container">
+                <div class="progress-text">Overall Progress: <span id="progress-count">0/500</span></div>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="filters">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="array">Arrays</option>
+                <option value="strings">Strings</option>
+                <option value="linkedlist">Linked Lists</option>
+                <option value="Stacks & Queues">Stacks & Queues</option>
+                <option value="tree">Trees</option>
+                <option value="graph">Graphs</option>
+                <option value="dp">Dynamic Programming</option>
+                <option value="matrix">Matrix</option>
+                <option value="Searching & Sorting">Searching & Sorting</option>
+                <option value="Sorting">Sorting</option>
+                <option value="Searching">Searching</option>
+                <option value="binary search">Binary Search</option>
+                <option value="map & sets">Map & Sets</option>
+            </select>
+
+            <select id="difficulty-filter">
+                <option value="all">All Difficulties</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <select id="status-filter">
+                <option value="all">All Status</option>
+                <option value="solved">Solved</option>
+                <option value="unsolved">Unsolved</option>
+            </select>
+        </div>
+
+        <div class="problems-container" id="problems-list">
+            <!-- Problems will be populated here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Note Modal -->
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Note for <span id="problem-title"></span></h2>
+            <textarea id="note-textarea" rows="6"></textarea>
+            <div class="modal-actions">
+                <button id="save-note-btn" class="note-btn">Save</button>
+                <button id="delete-note-btn" class="note-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <a href="https://github.com/SaurabhKP28" target="_blank" class="project-btn">Project</a>
+            <button id="night-mode-toggle">Night Mode</button>
+    
+        </div>
+    </footer>
+    <script src="js/data/problems.js"></script>
+    <script src="js/utils/storage.js"></script>
+    <script src="js/utils/filters.js"></script>
+    <script src="js/components/problemCard.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/features/nightMode.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
